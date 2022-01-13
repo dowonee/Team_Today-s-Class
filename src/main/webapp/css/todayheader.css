@@ -1,0 +1,122 @@
+@charset "UTF-8";
+a{
+	text-decoration : none;
+	color : black;
+}
+html,body{
+	font-family : Noto Sans KR,Malgun Gothic;
+	background-color: #fff;
+	width : 100%;
+	height : 100%;
+	margin : 0;
+}
+input:focus {
+	outline:none;
+}
+header{
+	width : 100%;
+	height : 11.6%;
+	border-bottom : solid 1px #F5F5F5;
+}
+header #top{
+	width : 59%;
+	height : 100%;
+	margin : 0 auto;
+	display : flex;
+}
+header #top>a{
+	width : 10%;
+	height : 100%;
+}
+header #top img {
+	width : 100%;
+	height : 100%;
+}
+header #top #btn{
+	height : 100%;
+	width : 20%;
+}
+header #top #btn>a {
+	display : inline-block;
+	padding : 3%;
+	height : 100%;
+	line-height : 800%;
+	text-decoration : none;
+	color : black;
+	font-size : 0.7vw;
+}
+header #top #btn #my{
+	display : inline-block;
+	cursor : pointer;
+	font-weight : 300px;
+} 
+header #top #btn #my div{
+	display : none;
+}
+header #top #btn #my .display{
+	display : block;
+	position : absolute;
+	z-index: 1000;
+	top : 9%;
+	right : 20.5%;
+	box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+	padding: 1.3125rem;
+	border : 0.5px solid rgba(0,0,0,0.1);
+	background-color : white;
+	cursor : auto;
+}
+header #top #btn #my .display h4{
+	margin : 0;
+	height : 50px;
+	line-height : 50px;
+}
+header #top #btn #my .display ul{
+	width : 140px;
+	height : 90px;
+	margin : 0;
+	padding : 0;
+	list-style : none;
+}
+
+header #top #btn .display ul li{
+	height : 33px;
+	line-height : 33px;
+	cursor : pointer;
+}
+header #top #btn .display ul li a{
+	padding : 0;
+}
+header #top #btn .display ul li a:hover{
+	color : #6482FF;
+}
+header #top .search-box{
+  box-shadow: 0px 0px 2px 2px #6482FF;
+  width: 27%;
+  height : 40%;
+  margin: 3% 40% 3% 3%;
+  border-radius: 30px;
+ 
+}
+header #top .search-btn{
+  text-decoration: none;
+  color: #6482FF;
+  line-height: 250%;
+  position: relative;
+  bottom: 7%;
+}
+.search-txt{
+  border:none;
+  width: 80%;
+  margin: 2%;
+    padding: 0% 1% 0% 3%;
+    font-size: 0.8vw;
+    border-radius: 10px;
+    position: relative;
+    bottom: 11%;
+}
+header #top .search-box:hover{
+	 box-shadow: 0px 0px 2px 4px #6482FF;
+}
+#cl{
+	clear : both;
+}
