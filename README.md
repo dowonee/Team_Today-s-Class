@@ -121,16 +121,102 @@
 * 외주 리스트
 
 > <a href="https://ibb.co/QHvZhM7"><img src="https://i.ibb.co/VCYdbT0/20.png" alt="20" border="0"></a>
+```
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		request.setCharacterEncoding("utf-8");
+		String page = "os_list.jsp";
+		String category = request.getParameter("category");
+		
+		ArrayList<Oslist> list;
+		list = service.oslist(category);
+		request.setAttribute("oslist", list);	
+
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher(page);
+		dispatcher.forward(request, response);
+	}
+```
 
 * 외주 상세페이지
 
 > <a href="https://ibb.co/WPQL1M5"><img src="https://i.ibb.co/Hx0jQb4/21.png" alt="21" border="0"></a>
+```
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		HttpSession session = request.getSession();
+		String page = "index.jsp";
+		
+		String SAVEFOLDER = "D:\\javaexp\\workspace\\project9\\src\\main\\webapp\\upload";
+		String ENCTYPE = "UTF-8";
+		int MAXSIZE =  1024 * 1024 *100;
+		MultipartRequest multi = null;
+		String filename = null;
+		File file = new File(SAVEFOLDER);
+		if (!file.exists())
+			file.mkdirs();
+		multi = new MultipartRequest(request, SAVEFOLDER, MAXSIZE, ENCTYPE, new DefaultFileRenamePolicy());
+		if (multi.getFilesystemName("osfile") != null) {
+			filename = multi.getFilesystemName("osfile");
+		}
+		
+		String pass = request.getParameter("pass");
+		
+		
+		String oscode = multi.getParameter("oscode");
+		String id = multi.getParameter("id");
+		String title = multi.getParameter("title");
+		String category = multi.getParameter("category");
+		String ftf = multi.getParameter("ftf");
+		String loc = multi.getParameter("loc");
+		String budget = multi.getParameter("budget");
+		String datepicker = multi.getParameter("datepicker");
+		String taxinvoice = multi.getParameter("taxinvoice");
+		String explain = multi.getParameter("explain");
+		
+		System.out.println(id);
+		if(id!=null) {
+			Osform os = new Osform();
+
+			os.setId(id);
+			os.setTitle(title);
+			os.setCategory(category);
+			os.setFtf(ftf);
+			os.setLoc(loc);
+			os.setBudget(budget);
+			os.setDatepicker(datepicker);
+			os.setTaxinvoice(taxinvoice);
+			os.setExplain(explain);
+			os.setOsfile(filename);
+			
+			service.insosformJson(os);
+			page = "index.jsp";
+			
+		} else {
+			page = "os_form.jsp";
+		}
+		
+		
+		RequestDispatcher rd = request.getRequestDispatcher(page);
+		rd.forward(request, response);
+	}
+```
 
 * 마이페이지
 > <a href="https://ibb.co/NFNfn0P"><img src="https://i.ibb.co/XW56kng/15.jpg" alt="15" border="0"></a>
 <a href="https://ibb.co/zhPL3NB"><img src="https://i.ibb.co/5WszQ2S/16.jpg" alt="16" border="0"></a>
 <a href="https://ibb.co/p1HfY3x"><img src="https://i.ibb.co/tH0qVb4/17.jpg" alt="17" border="0"></a>
 <a href="https://ibb.co/SyQKZQ6"><img src="https://i.ibb.co/T2KHNKw/18.jpg" alt="18" border="0"></a>
+```
+	onload = function() {
+	var today = new Date(); //현재 날짜 가져오기
+  	var dday = new Date("2021-09-31"); //디데이
+    var gap =  today.getTime()-dday.getTime();
+    var result = Math.ceil(gap / (1000 * 60 * 60 * 24));
+	document.getElementById("dday").innerHTML = "D"+result;
+	};
+```
+
 <a href="https://ibb.co/fkSM285"><img src="https://i.ibb.co/QPc9f8R/19.jpg" alt="19" border="0"></a>
 
 ```
