@@ -3,29 +3,29 @@
 
 <p align="center"><img src="https://github.com/dowonee/Team_Today-s-Class/blob/cdac82c8c9454c2ca601c77b21ced40795febd8d/%EC%98%A4%EB%8A%98%EC%9D%98%EC%88%98%EC%97%85%20(2).png?raw=true"></p>
 
-## 프로젝트 계획
+## ⚡ 프로젝트 계획
 > 학생과 선생님의 매칭을 서비스하는 재능 판매 플랫폼입니다. 
 > 
 
 ---      
 
-## 프로젝트 기간
+## ⚡ 프로젝트 기간
 > 2021.08.20 - 2021.09.15
 
 ---
 
-## 페이지구성
+## ⚡ 페이지구성
 > <a href="https://ibb.co/7tcVrvx"><img src="https://i.ibb.co/5hDvsTX/1.jpg" alt="1" border="0"></a>
 <a href="https://ibb.co/CHZTSyy"><img src="https://i.ibb.co/Js4MSTT/2.jpg" alt="2" border="0"></a>
 
 ---
 
-## ERD
+## ⚡ ERD
 > <a href="https://ibb.co/XypxsHx"><img src="https://i.ibb.co/yh5Fy2F/3.png" alt="3" border="0"></a>
 
 ---
 
-## Permission
+## ⚡ Permission
 > <a href="https://ibb.co/CKbXpct"><img src="https://i.ibb.co/v43rCFB/5.png" alt="5" border="0"></a>
 <a href="https://ibb.co/QFJTxcw"><img src="https://i.ibb.co/HDKb928/6.png" alt="6" border="0"></a>
 <a href="https://ibb.co/QFJTxcw"><img src="https://i.ibb.co/HDKb928/6.png" alt="6" border="0"></a>
@@ -33,7 +33,7 @@
 
 ---
 
-## 맡은 기능구현
+## ⚡ 맡은 기능구현
 
 * 메인화면  
 
@@ -73,7 +73,7 @@
 <a href="https://ibb.co/SyQKZQ6"><img src="https://i.ibb.co/T2KHNKw/18.jpg" alt="18" border="0"></a>
 <a href="https://ibb.co/fkSM285"><img src="https://i.ibb.co/QPc9f8R/19.jpg" alt="19" border="0"></a>
 
-## ISSUES
+## ⚡ ISSUES
 <details markdown="1">
 <summary>펼치기</summary>
 
